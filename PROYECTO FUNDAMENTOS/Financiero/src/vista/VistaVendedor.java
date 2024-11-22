@@ -1,18 +1,16 @@
 package vista;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
 import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class VistaVendedor extends JFrame {
 
@@ -33,88 +31,95 @@ public class VistaVendedor extends JFrame {
 	public JButton btnModificar;
 	public JButton btnBorrar;
 	public JButton btnBuscar;
-	
+
+	/**
+	 * Create the frame.
+	 */
 	public VistaVendedor() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1293, 742);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		LabelVendedores = new JLabel("VENDEDORES");
-		LabelVendedores.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		LabelVendedores.setBounds(174, 11, 120, 14);
-		contentPane.add(LabelVendedores);
-		
 		LabelId = new JLabel("Identificacion");
-		LabelId.setBounds(32, 53, 87, 14);
+		LabelId.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelId.setBounds(72, 134, 136, 40);
 		contentPane.add(LabelId);
 		
+		LabelVendedores = new JLabel("VENDEDORES");
+		LabelVendedores.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		LabelVendedores.setBounds(504, 31, 214, 54);
+		contentPane.add(LabelVendedores);
+		
 		LabelNombre = new JLabel("Nombre");
-		LabelNombre.setBounds(32, 74, 46, 14);
+		LabelNombre.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelNombre.setBounds(72, 188, 118, 25);
 		contentPane.add(LabelNombre);
 		
 		LabelEdad = new JLabel("Edad");
-		LabelEdad.setBounds(32, 96, 46, 14);
+		LabelEdad.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelEdad.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelEdad.setBounds(72, 232, 107, 25);
 		contentPane.add(LabelEdad);
 		
-		LabelIngreso = new JLabel("Año de Ingreso");
-		LabelIngreso.setBounds(32, 120, 87, 14);
-		contentPane.add(LabelIngreso);
-		
-		LabelTotalVentas = new JLabel("Total Ventas");
-		LabelTotalVentas.setBounds(32, 145, 76, 14);
-		contentPane.add(LabelTotalVentas);
-		
 		textFieldId = new JTextField();
-		textFieldId.setBounds(129, 50, 86, 14);
+		textFieldId.setBounds(366, 146, 308, 25);
 		contentPane.add(textFieldId);
 		textFieldId.setColumns(10);
 		
+		LabelIngreso = new JLabel("Año de ingreso");
+		LabelIngreso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelIngreso.setBounds(72, 273, 165, 25);
+		contentPane.add(LabelIngreso);
+		
+		LabelTotalVentas = new JLabel("Total de Ventas");
+		LabelTotalVentas.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		LabelTotalVentas.setBounds(72, 308, 188, 32);
+		contentPane.add(LabelTotalVentas);
+	
+		
 		textFieldNombre = new JTextField();
-		textFieldNombre.setBounds(129, 71, 153, 14);
+		textFieldNombre.setBounds(366, 188, 308, 26);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldEdad = new JTextField();
-		textFieldEdad.setBounds(129, 93, 62, 14);
+		textFieldEdad.setBounds(366, 233, 308, 25);
 		contentPane.add(textFieldEdad);
 		textFieldEdad.setColumns(10);
 		
 		textFieldIngreso = new JTextField();
-		textFieldIngreso.setBounds(129, 117, 86, 14);
+		textFieldIngreso.setBounds(367, 274, 307, 25);
 		contentPane.add(textFieldIngreso);
 		textFieldIngreso.setColumns(10);
 		
 		textFieldTotalVentas = new JTextField();
-		textFieldTotalVentas.setBounds(129, 142, 86, 14);
+		textFieldTotalVentas.setBounds(367, 313, 307, 25);
 		contentPane.add(textFieldTotalVentas);
 		textFieldTotalVentas.setColumns(10);
 		
 		btnAgregar = new JButton("Agregar nuevo");
-		btnAgregar.setBounds(32, 194, 105, 23);
+		btnAgregar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnAgregar.setBounds(98, 438, 194, 46);
 		contentPane.add(btnAgregar);
 		
-		btnBuscar = new JButton("Buscar");
-		btnBuscar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnBuscar.setBounds(324, 44, 65, 14);
-		contentPane.add(btnBuscar);
-		
 		btnModificar = new JButton("Modificar");
-		btnModificar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnModificar.setBounds(174, 194, 89, 23);
+		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnModificar.setBounds(366, 438, 194, 40);
 		contentPane.add(btnModificar);
 		
 		btnBorrar = new JButton("Borrar");
-		btnBorrar.setBounds(318, 194, 89, 23);
+		btnBorrar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnBorrar.setBounds(644, 438, 194, 40);
 		contentPane.add(btnBorrar);
+		
+		btnBuscar = new JButton("Buscar");
+		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnBuscar.setBounds(719, 140, 107, 33);
+		contentPane.add(btnBuscar);
 	}
+
 }

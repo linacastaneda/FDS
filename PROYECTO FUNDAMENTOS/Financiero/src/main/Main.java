@@ -1,14 +1,12 @@
 package main;
-
-import controlador.ControllerRepartidor;
-import vista.VistaRepartidor;
-
+import controlador.ControllerVendedor;
+import vista.VistaVendedor;
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ControllerRepartidor cRepartidor = new ControllerRepartidor(new VistaRepartidor());
+		ControllerVendedor cVendedor = new ControllerVendedor(new VistaVendedor());
 	}
 
 }

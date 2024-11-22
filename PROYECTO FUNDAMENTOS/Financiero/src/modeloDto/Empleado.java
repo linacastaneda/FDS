@@ -2,7 +2,7 @@ package modeloDto;
 
 import java.io.Serializable;
 
-public class Empleado implements Serializable  {
+public class Empleado implements Serializable{
 	
 	protected int identificacion;
 	protected String nombre;
@@ -10,7 +10,6 @@ public class Empleado implements Serializable  {
 	protected int anio_ingreso;
 	protected final double salarioBase = 1000;
 	protected double descuento;
-	
 	public Empleado() {
 		
 	}
@@ -22,7 +21,7 @@ public class Empleado implements Serializable  {
 		this.edad = edad;
 		this.anio_ingreso = anio_ingreso;
 	}
-
+	
 	public int getIdentificacion() {
 		return identificacion;
 	}
@@ -59,10 +58,14 @@ public class Empleado implements Serializable  {
 		return salarioBase;
 	}
 
-	
-	
-	
-	
+	public double getDescuento() {
+		return descuento;
+	}
+
+	public void setDescuento(double descuento) {
+		this.descuento = descuento;
+	}
 	
 
+	
 }
