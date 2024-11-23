@@ -116,6 +116,7 @@ public class VendedorDao {
     	
     	double descuento = vendedor.getSalarioBase()*0.10;
     	double bonificacion;
+    	double comision =vendedor.getTotalVentas()*0.15;
     	
     	if(LocalDate.now().getYear() - vendedor.getAnio_ingreso() > 20){
             bonificacion = 100000;
@@ -124,10 +125,11 @@ public class VendedorDao {
         }
     	vendedor.setDescuento(descuento);
         vendedor.setBonificacion(bonificacion);
+        vendedor.setComision(comision);
         
         double salario;
         
-        salario=vendedor.getSalarioBase()+bonificacion-descuento;
+        salario=vendedor.getSalarioBase()+comision+bonificacion-descuento;
         
         vendedor.setSalario(salario);
         
