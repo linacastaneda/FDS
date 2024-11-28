@@ -12,78 +12,82 @@ import javax.swing.JMenu;
 public class VistaPrincipal extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VistaPrincipal frame = new VistaPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	public JPanel contentPane;
+	public JMenuBar menuBar;
+	public JMenu mnDatos;
+	public JMenuItem mntmVendedores;
+	public JMenuItem mntmRepartidores;
+	public JMenu mnNomina;
+	public JMenuItem mntmLiquidarNomina;
+	public JMenu mnConsultas;
+	public JMenu mnVendedoresConsulta;
+	public JMenuItem mntmNVendedores;
+	public JMenuItem mntmMVendedor;
+	public JMenu mnRepartidoresConsulta ;
+	public JMenuItem mntmNRepartidores;
+	public JMenuItem mntmMRepartidores;
+	public JMenuItem mntmEmpleados;
+	public JMenu mnSalir;
+	public JMenuItem mntmSalir;
+	
+	
 	public VistaPrincipal() {
 		setTitle("SISTEMA GENERAL FINANCIERO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1293, 742);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JMenuBar menuBar = new JMenuBar();
+		menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 444, 22);
 		contentPane.add(menuBar);
 		
-		JMenu mnDatos = new JMenu("Datos");
+		mnDatos = new JMenu("Datos");
 		menuBar.add(mnDatos);
 		
-		JMenuItem mntmVendedores = new JMenuItem("Vendedores");
+		mntmVendedores = new JMenuItem("Vendedores");
 		mnDatos.add(mntmVendedores);
 		
-		JMenuItem mntmRepartidores = new JMenuItem("Repartidores");
+		mntmRepartidores = new JMenuItem("Repartidores");
 		mnDatos.add(mntmRepartidores);
 		
-		JMenu mnConsultas = new JMenu("Consultas");
+		mnNomina = new JMenu("Nomina");
+		menuBar.add(mnNomina);
+		
+		mntmLiquidarNomina = new JMenuItem("Liquidar Nomina");
+		mnNomina.add(mntmLiquidarNomina);
+		
+		mnConsultas = new JMenu("Consultas");
 		menuBar.add(mnConsultas);
 		
-		JMenu mnVendedoresConsulta = new JMenu("Vendedores");
+		mnVendedoresConsulta = new JMenu("Vendedores");
 		mnConsultas.add(mnVendedoresConsulta);
 		
-		JMenuItem mntmNominaV = new JMenuItem("Nomina");
-		mnVendedoresConsulta.add(mntmNominaV);
+		mntmNVendedores = new JMenuItem("Vendedores");
+		mnVendedoresConsulta.add(mntmNVendedores);
 		
-		JMenuItem mntmMVendedor = new JMenuItem("Mayores Vendedores (3)");
+		mntmMVendedor = new JMenuItem("Mayores Vendedores (3)");
 		mnVendedoresConsulta.add(mntmMVendedor);
 		
-		JMenu mnRepartidoresConsulta = new JMenu("Repartidores");
+		mnRepartidoresConsulta = new JMenu("Repartidores");
 		mnConsultas.add(mnRepartidoresConsulta);
 		
-		JMenuItem mntmNominaR = new JMenuItem("Nomina");
-		mnRepartidoresConsulta.add(mntmNominaR);
+		mntmNRepartidores = new JMenuItem("Repartidores");
+		mnRepartidoresConsulta.add(mntmNRepartidores);
 		
-		JMenuItem mntmMRepartidores = new JMenuItem("Mayor Repartidor");
+		mntmMRepartidores = new JMenuItem("Mayor Repartidor");
 		mnRepartidoresConsulta.add(mntmMRepartidores);
 		
-		JMenuItem mntmEmpleados = new JMenuItem("Empleados");
+		mntmEmpleados = new JMenuItem("Empleados");
 		mnConsultas.add(mntmEmpleados);
 		
-		JMenu mnSalir = new JMenu("Salir");
+		mnSalir = new JMenu("Salir");
 		menuBar.add(mnSalir);
 		
-		JMenuItem mntmSalir = new JMenuItem("Salir");
+		mntmSalir = new JMenuItem("Salir");
 		mnSalir.add(mntmSalir);
 		
 		

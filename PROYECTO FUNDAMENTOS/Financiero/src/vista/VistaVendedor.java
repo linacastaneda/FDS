@@ -36,6 +36,7 @@ public class VistaVendedor extends JFrame {
 	 * Create the frame.
 	 */
 	public VistaVendedor() {
+		setTitle("SISTEMA GENERAL FINANCIERO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1293, 742);
 		contentPane = new JPanel();

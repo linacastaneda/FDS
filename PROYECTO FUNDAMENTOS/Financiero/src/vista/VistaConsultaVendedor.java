@@ -35,8 +35,9 @@ public class VistaConsultaVendedor extends JFrame {
 	
 	@SuppressWarnings("serial")
 	public VistaConsultaVendedor() {
+		setTitle("SISTEMA GENERAL FINANCIERO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 814, 396);
+		setBounds(100, 100, 1293, 742);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
